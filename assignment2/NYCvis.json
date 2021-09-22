@@ -7,8 +7,8 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/jasonkknipe/datatest/main/assignment2/NYCboroughNew.topojson",
-        "format": {"type": "topojson", "feature": "Borough_Boundaries"}
+        "url": "https://raw.githubusercontent.com/jasonkknipe/datatest/main/assignment2/police_precincts.topojson",
+        "format": {"type": "topojson", "feature": "police_precincts"}
       },
       "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "black"}
     },
