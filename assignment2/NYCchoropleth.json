@@ -16,19 +16,19 @@
           "url": "https://raw.githubusercontent.com/jasonkknipe/datatest/main/assignment2/precinctcount.csv"
         },
         "key": "PRECINCT",
-        "fields": ["freq"]
+        "fields": ["peryear"]
       }
     }
   ],
   "mark": {"type": "geoshape","stroke": "black"},
   "encoding": {
     "color": {
-      "field": "freq",
+      "field": "peryear",
       "type": "quantitative"
     },
     "tooltip": [
       {"field": "properties.Precinct", "type": "nominal", "title": "Precinct"},
-      {"field": "freq", "type": "quantitative"}
+      {"field": "peryear", "type": "quantitative"}
     ]
   }
 }
