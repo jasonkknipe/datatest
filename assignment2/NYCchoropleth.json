@@ -1,0 +1,34 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "NYC Police Precincts",
+  "width": 800,
+  "height": 600,
+  "projection": {"type": "mercator"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/jasonkknipe/datatest/main/assignment2/police_precincts.topojson",
+    "format": {"type": "topojson", "feature": "police_precincts"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.Precinct",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jasonkknipe/datatest/main/assignment2/precinctcount.csv"
+        },
+        "key": "PRECINCT",
+        "fields": ["freq"]
+      }
+    }
+  ],
+  "mark": {"type": "geoshape","stroke": "black"},
+  "encoding": {
+    "color": {
+      "field": "freq",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {"field": "properties.Precinct", "type": "nominal", "title": "Precinct"},
+      {"field": "freq", "type": "quantitative"}
+    ]
+  }
+}
