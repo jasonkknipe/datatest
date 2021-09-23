@@ -24,7 +24,11 @@
   "encoding": {
     "color": {
       "field": "peryear",
-      "type": "quantitative"
+      "type": "quantitative",
+      "title": "Shootings per year",
+      "scale": {
+        "scheme": "reds"
+      }
     },
     "tooltip": [
       {"field": "properties.Precinct", "type": "nominal", "title": "Precinct code"},
