@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "NYC Police Precincts",
+  "title": "NYC Police Precincts Shooting Per Year (2006-2019)",
   "width": 800,
   "height": 600,
   "projection": {"type": "mercator"},
@@ -28,7 +28,7 @@
     },
     "tooltip": [
       {"field": "properties.Precinct", "type": "nominal", "title": "Precinct"},
-      {"field": "peryear", "type": "quantitative"}
+      {"field": "peryear", "type": "quantitative","title": "Shootings per Year", "format": ".2f"}
     ]
   }
 }
