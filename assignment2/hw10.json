@@ -13,8 +13,17 @@
   "mark": {"type": "arc", "stroke":"white"},
 
   "encoding": {
-    "theta": {"field": "VIC_RACE", "type": "nominal", "aggregate": "count"},
-    "color": {"field": "VIC_RACE", "scale":{"scheme":"set2"}}
+    "theta": {"field": "VIC_RACE", "type": "quantitative", "aggregate": "count"},
+    "color": {"type":"nominal","field": "VIC_RACE", "scale":{"scheme":"set2"}},
+
+    "tooltip": [
+      {"field": "VIC_RACE", "type": "nominal", "title": "Race:"},
+      {"field": "VIC_RACE", "type": "quantitative", "aggregate":"count", "title": "Victims:"}
+
+    ]
+
+
+
   },
   "params": [ {
     "name": "Boro_Select",
@@ -36,8 +45,10 @@
         "Staten Island",
         "Queens"
       ],
-      "name": "Select Borough" }
+      "name": "Select Borough: " }
   } ]
+
+
 
 
 }
