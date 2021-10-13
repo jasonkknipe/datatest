@@ -1,0 +1,51 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jasonkknipe/datatest/main/assignment2/fullNYCshootings.csv"
+  },
+
+  "transform": [
+    {"filter": "Race_Select == null || datum.VIC_RACE == Race_Select"}
+  ],
+
+  "width": 1000,
+  "height": 300,
+
+  "mark": "line",
+  "title":"Shootings in NYC (2006-2019)",
+
+  "params": [ {
+    "name": "Race_Select",
+    "bind": {
+      "input": "select",
+      "options": [
+        null,
+        "BLACK",
+        "BLACK HISPANIC",
+        "WHITE",
+        "WHITE HISPANIC",
+        "ASIAN / PACIFIC ISLANDER"
+      ],
+      "labels":[
+        "Show All",
+        "Black",
+        "Black-Hispanic",
+        "White",
+        "White-Hispanic",
+        "Asian/Pacific Islander"
+      ],
+      "name": "Select Borough: " }
+  } ],
+
+  "encoding": {
+    "stroke": {"value": "#CF202A"},
+    "x": {
+      "field": "OCCUR_DATE",
+      "timeUnit": "yearmonth",
+      "axis": {"title": "Month", "tickCount": 10, "grid": true}
+
+    },
+    "y": {"aggregate": "count", "title": "Count"}
+  }
+
+}

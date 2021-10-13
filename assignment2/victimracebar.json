@@ -1,0 +1,27 @@
+{
+  "data": { "url": "https://raw.githubusercontent.com/jasonkknipe/datatest/main/assignment2/fullNYCshootings.csv" },
+  "width": 400,
+  "height": 300,
+  "transform": [
+    {
+      "aggregate": [{
+        "op": "count",
+        "field": "VIC_RACE",
+        "as": "vic_total"
+      }],
+      "groupby": ["VIC_RACE"]
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": { "field": "vic_total", "type": "quantitative", "title":"Incidents" },
+
+    "y": { "field": "VIC_RACE", "type": "ordinal" , "title":"Victim Race" },
+
+    "tooltip": [
+      {"field": "VIC_RACE", "type": "ordinal", "title": "Victim Race"},
+      {"field": "vic_total", "type": "quantitative"}
+    ]
+
+  }
+}
