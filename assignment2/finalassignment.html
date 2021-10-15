@@ -1,48 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Week 10 Homework</title>
+    <meta charset="UTF-8">
+    <title>Week 10 Homework</title>
 
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-  <script src="homework10.js"></script>
-  <script src="homework9.js"></script>
-  <script src="timerace.js"></script>
-  <script src="victimracebar.js"></script>
-  <script src="murderpie.js"></script>
+    <script src="homework10.js"></script>
+    <script src="homework9.js"></script>
+    <script src="timerace.js"></script>
+    <script src="victimracebar.js"></script>
+    <script src="murderpie.js"></script>
+
+    <style>
+        * {
+            font-family: Arial;
+            color: dimgrey;
+            text-align: center;
+
+
+        }
+
+        .precinct75 {
+            width: 1280px;
+            height: 200px;
+            /*background-color: lawngreen;*/
+            margin-top: 40px;
+            column-count: 4;
+            column-gap: 30px;
+            text-align: justify;
+        }
+
+        .section1 {
+            width: 1280px;
+            height: 800px;
+            /*background-color: sandybrown;*/
+        }
+
+        .section2 {
+            width: 1280px;
+            height: 400px;
+            /*background-color: deepskyblue;*/
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        .section3 {
+            width: 1280px;
+            height: 160px;
+            /*background-color: yellow;*/
+            margin-top: 100px;
+            margin-bottom: 10px;
+            column-count: 4;
+            column-gap: 30px;
+            text-align: justify;
+            padding-top: 40px;
+        }
+
+        .topheader {
+            text-align: center;
+            font-size: 14pt;
+            color: dimgrey;
+            float: top;
+            /*background-color: cyan;*/
+            width: 1280px;
+        }
+
+        .text1 {
+            width: 360px;
+            height: 800px;
+            /*background-color: palegreen;*/
+            float: left;
+            padding-left: 25px;
+            padding-right: 25px;
+            align-items: center;
+            justify-content: center;
+            margin-right: 40px;
+
+
+        }
+
+        .text2 {
+            width: 180px;
+            height: 400px;
+            /*background-color: lightpink;*/
+            float: left;
+            padding-left: 25px;
+            padding-right: 25px;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        p {
+            font-size: 14pt;
+        }
+
+        .littleheader {
+            font-size: 24pt;
+        }
+
+    </style>
+
 </head>
 <body>
 
-<div id="pieWeek10">
+<div class="topheader">
+    <h1>
+        Shootings in NYC (2006 - 2019)
+    </h1>
+</div>
+
+<div class="section1">
+    <div class="text1">
+        <br>
+        <br>
+        <p>
+            Over recent decades, gun control in the US has been one of the most widely discussed news topics worldwide.
+            Many differing opinions with constitution, faith and protection have driven a wedge between portions of the
+            American public. This analysis aims to break down the use of such weapons in the largest city in the US, <b>New
+            York City</b>.
+        </p>
+
+        <p>
+            Police shooting records over a 14-year period from 2006-2019 have been collected and classified based on a
+            range of factors including the details of time, location, the victim, and the perpetrator where possible.
+            These have been plotted over a geographic map of NYC to ultimately produce the following visualisations.
+        </p>
+
+        <p>
+            There are <b>21,626</b> total incidents, each with its own story to tell.
+        </p>
+
+    </div>
+
+    <div id="mapWeek9">
+
+
+    </div>
+
+</div>
+
+<div class="precinct75">
+    <h3 class="littleheader">
+
+        The 75th<br> Police Precinct, <br>Brooklyn
+    </h3>
+
+    <p style="text-align: justify">
+        Shootings are rampant throughout New York City, especially in the borough of Brooklyn. <a
+            href="https://bklyner.com/what-will-it-take-to-fix-the-citys-most-troubled-police-precinct/"
+            target="_blank">Precinct 75 is
+        well known to be the most troubled police precinct in the city</a>, some of which is contributed to by the high
+        concentration of public housing in the area. <br> Throughout much of the US, the political movement to ‘defund
+        the
+        police’ has gained massive traction. Brooklyn Public Safety Committee Chairman Vincent Riggins agrees, stating
+        that
+
+        <i>“regardless of how much they spend on the police, they have to come up with money to address housing, jobs,
+            entrepreneurship initiatives, schools where kids can learn a trade with their hands to become gainfully
+            employed
+            in their own businesses." </i>
+
+    </p>
+</div>
+
+<div class="section2">
+
+    <div id="murderPie" style="float: left">
+
+    </div>
+
+    <div class="text2" style="margin-right: 35px">
+        <br>
+        <br>
+        <p style="text-align: left">
+            Despite the somewhat shocking figures, it may surprise some that the vast majority of these incidents are
+            non-lethal, and many aren’t acts of aggression, more so self-defence.
+            <br>
+            <br>
+            Only <b>19%</b> of incidents were
+            statistically considered to be incidents of murder.
+        </p>
+
+    </div>
+
+
+    <div class="text2" style="margin-left: 45px">
+        <br>
+        <br>
+        <p style="text-align: right">
+            The unfortunate reality of these incidents is that they are not at all racially neutral. Over the observed
+            period, over <b>70%</b> of the affected victims were black.
+            <br>
+            <br>
+            City Journal reports that in addition to this, around
+            <a href="https://www.city-journal.org/new-york-city-violence-surging" target="_blank"><b>74%</b></a> of
+            suspects are also black
+        </p>
+
+    </div>
+
+    <div id="victimRaceBar">
+
+    </div>
 
 
 </div>
 
 
-<div id="mapWeek9">
+<div class="section3">
+    <h3 class="littleheader">
+        The NYC
+        <br>
+        SAFE Act, 2013
+    </h3>
+    <br>
+    <p style="text-align: justify">
+        Following the Sandy Hook Elementary School shooting in December of 2012, gun laws around the US were tightened –
+        including in Ney York State. On January 15, 2013, <a
+            href="https://www.nytimes.com/2013/01/16/nyregion/tougher-gun-law-in-new-york.html" target="_blank">legislation
+        was
+        passed</a> which introduced many new laws and
+        restrictions around the purchase and ownership of firearms. These changes included making many categories of
+        advanced firearms illegal, as well as requiring much more thorough background checks for individuals wishing to
+        purchase ammunition. Following these changes, reported firearm incidents in have NYC decreased by around 38%.
+    </p>
 
 
 </div>
 
-<div id="murderPie">
+<div id="timeRace" style="float: left">
 
 </div>
 
-
-<div id="timeRace">
+<div class="topheader" style="align-content: end">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <p>By Jason Knipe - 28792432</p>
 
 </div>
-
-
-
-<div id="victimRaceBar">
-
-</div>
-
-
 
 </body>
 </html>

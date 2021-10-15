@@ -3,27 +3,75 @@
   "width": 400,
   "height": 400,
   "title": "Outcome of NYC Shootings (2006-2019)",
+  "config": {"legend":{"disable":true}},
+
 
   "description": "Victim Race of NYC Shootings 2006-2019",
   "data": {"url": "https://raw.githubusercontent.com/jasonkknipe/datatest/main/assignment2/fullNYCshootings.csv"},
 
 
 
-  "mark": {"type": "arc", "stroke":"white"},
 
+  "layer":[
+    {"mark": {"type": "arc", "stroke":"white"}
+
+    },
+
+    {
+      "mark": { "type": "text",
+        "x":120,
+        "y":80,
+        "fontSize":16
+
+      },
+      "encoding": {
+        "text": {"value":["Murder","19.08%"]},
+        "color": {"value":["#FFFFFF"]}
+
+      }
+    },
+    {
+      "mark": { "type": "text",
+        "x":280,
+        "y":80,
+        "fontSize":16
+
+      },
+      "encoding": {
+        "text": {"value":["Non-Murder","80.92%"]},
+        "color": {"value":["#000000"]}
+
+      }
+    }
+
+
+  ],
   "encoding": {
 
 
     "theta": {"field": "STATISTICAL_MURDER_FLAG", "type": "quantitative", "aggregate": "count"},
-    "color": {"type":"nominal","field": "STATISTICAL_MURDER_FLAG", "scale":{"scheme":"set2"}},
+    "color": {
+      "field": "STATISTICAL_MURDER_FLAG", "type": "nominal",
+      "scale": {
+        "domain": ["TRUE", "FALSE"],
+        "range": ["#CF202A", "#6db843"]
+      }
 
-    "text":{"field": "STATISTICAL_MURDER_FLAG", "aggregate":"count", "type": "quantitative"}
+
+    },
+
+    "tooltip": [
+      {"field": "STATISTICAL_MURDER_FLAG", "type": "ordinal", "title": "Statistical Murder?"},
+      {"field": "STATISTICAL_MURDER_FLAG", "type": "quantitative", "aggregate": "count", "title":"Incidents"}
+    ]
+
+
+
+
+
 
 
 
   }
-
-
-
 
 }

@@ -5,7 +5,7 @@
   },
 
 
-  "width": 1000,
+  "width": 1200,
   "height": 300,
 
   "title":"Shootings in NYC (2006-2019)",
@@ -28,7 +28,7 @@
         "values": [{}]
       },
       "encoding": {
-        "x": {"value":510}
+        "x": {"value":612}
       },
       "layer": [{
         "mark": "rule"
