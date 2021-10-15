@@ -25,7 +25,7 @@
 
       },
       "encoding": {
-        "text": {"value":["Murder","19.08%"]},
+        "text": {"value":["Murder","19.1%"]},
         "color": {"value":["#FFFFFF"]}
 
       }
@@ -38,7 +38,7 @@
 
       },
       "encoding": {
-        "text": {"value":["Non-Murder","80.92%"]},
+        "text": {"value":["Non-Murder","80.9%"]},
         "color": {"value":["#000000"]}
 
       }

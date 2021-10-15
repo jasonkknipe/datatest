@@ -17,10 +17,10 @@
         "x": {
           "field": "OCCUR_DATE",
           "timeUnit": "yearmonth",
-          "axis": {"title": "Month", "tickCount": 10, "grid": true}
+          "axis": {"title": "", "tickCount": 10, "grid": true}
 
         },
-        "y": {"aggregate": "count", "title": "Count"}
+        "y": {"aggregate": "count", "title": "Incidents"}
       }},
 
     {

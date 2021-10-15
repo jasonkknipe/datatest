@@ -34,7 +34,7 @@
     "tooltip": [
       {"field": "properties.Precinct", "type": "nominal", "title": "Precinct code"},
       {"field": "BORO", "type": "nominal", "title": "Borough"},
-      {"field": "peryear", "type": "quantitative","title": "Avg. shootings p.a.", "format": ".2f"}
+      {"field": "peryear", "type": "quantitative","title": "Avg. shootings p/y", "format": ".2f"}
     ]
   }
 }
